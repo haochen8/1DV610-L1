@@ -1,8 +1,34 @@
 body {
-  display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60vh;
-	margin: 0;
   background-color:burlywood;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+#name-form {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#name-input {
+  margin-right: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#name-form button {
+  background-color:yellowgreen;
+  cursor: pointer;
+  padding: 4px;
+  color:white;
+  border-radius: 5px;
+}
+
+#name-form button:hover {
+  background-color: springgreen;
 }
