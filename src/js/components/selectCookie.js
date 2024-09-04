@@ -14,6 +14,20 @@ export function displayCookies() {
     img.src = 'src/img/fortune-cookie.jpg'
     img.alt = 'fortune cookie'
     img.className = 'cookie'
+
+    // Attach click event listeners to images
+    img.addEventListener('click', function () {
+      // Deselect other cookies
+      const cookies = document.querySelector('cookies')
+      cookies.forEach(cookie => {
+        cookie.style.border = 'none'
+        cookie.style.opacity = '1'
+      })
+
+      // Highlight the selected cookie
+      img.style.opacity = '0.5'
+    })
+
     cookieContainer.appendChild(img)
   }
 }
