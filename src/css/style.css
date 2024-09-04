@@ -46,6 +46,7 @@ body {
 }
 
 #cookie-container img {
-  height: 100px;
-  width: 1000px;
+  height: 200px;
+  width: 200px;
+  padding: 5px;
 }

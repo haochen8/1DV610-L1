@@ -11,16 +11,14 @@ export function displayCookies() {
   // Create, loop and append identical img elements
   for (let i = 0; i < 5; i++) {
     const img = document.createElement("img");
-    img.src = "src/img/fortune-cookie.jpg";
+    img.src = "./img/fortune-cookie.jpg";
     img.alt = "fortune cookie";
     img.className = "cookie";
 
-    console.log('Images:', img)
-    
     // Attach click event listeners to images
     img.addEventListener("click", function () {
       // Deselect other cookies
-      const cookies = document.querySelector(".cookies");
+      const cookies = document.querySelectorAll(".cookie");
       cookies.forEach((cookie) => {
         cookie.style.border = "2px solid transparent";
         cookie.style.opacity = "1";
@@ -31,6 +29,5 @@ export function displayCookies() {
     });
 
     cookieContainer.appendChild(img);
-    console.log('Appended images:', img)
   }
 }
