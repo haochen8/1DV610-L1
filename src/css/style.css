@@ -38,3 +38,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#cookie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cookie-container img {
+  height: 100px;
+  width: 1000px;
+}
