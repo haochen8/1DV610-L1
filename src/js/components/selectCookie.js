@@ -4,6 +4,8 @@
  * @author Hao Chen <hc222ig@student.lnu.se>
  * @version 1.1.0
  */
+
+
 export function displayCookies() {
   // Get cookie-container from DOM
   const cookieContainer = document.getElementById("cookie-img");
@@ -25,9 +27,8 @@ export function displayCookies() {
       });
 
       // Highlight the selected cookie
-      img.style.opacity = "0.5";
+      img.style.opacity = "0";
     });
-    
     cookieContainer.appendChild(img);
   }
 }
