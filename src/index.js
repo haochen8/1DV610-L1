@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get quote container and hide
   const quoteContainer = document.getElementById("quote-container");
-  quoteContainer.style.display = "none";
+
 
   nameForm.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent the form from refreshing page

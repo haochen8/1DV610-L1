@@ -7,6 +7,8 @@
 
 import { quotes } from "./displayQuote.js";
 
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
 export function displayCookies() {
   let isCookieSelected = false;
 
@@ -33,13 +35,13 @@ export function displayCookies() {
         cookies.forEach((cookie) => {
           cookie.style.border = "2px solid transparent";
           cookie.style.opacity = "1";
-          isCookieSelected = true
+          isCookieSelected = true;
         });
       }
       // Highlight the selected cookie
       img.style.opacity = "0";
+      quoteContainer.textContent = `"${randomQuote}"`
     });
-
     cookieContainer.appendChild(img);
   }
 }
