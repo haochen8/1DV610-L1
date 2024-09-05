@@ -1,5 +1,8 @@
 /**
  * Main entry point of application.
+ * 
+ * @author Hao Chen <hc222ig@student.lnu.se>
+ * @version 1.1.0
  */
 
 import { getNameInput } from "./js/components/nameInput.js";
@@ -11,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get welcome container
   const welcomeContainer = document.getElementById("welcome-container");
+
+  // Get cookie container and hide
+  const cookieContainer = document.getElementById("cookie-container")
+  cookieContainer.style.display = "none"
 
   nameForm.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent the form from refreshing page
@@ -26,8 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
       errorMessage.textContent = "";
       //Hide name form
       welcomeContainer.style.display = "none";
-      //Call displayCookies
+      //Call displayCookies and show
       displayCookies();
+      cookieContainer.style.display = 'flex'
     }
   });
 });

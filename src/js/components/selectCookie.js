@@ -1,12 +1,12 @@
 /**
- * Displays 5 identical cookie images.
+ * Displays 5 identical cookie image component.
+ * 
+ * @author Hao Chen <hc222ig@student.lnu.se>
+ * @version 1.1.0
  */
 export function displayCookies() {
   // Get cookie-container from DOM
-  const cookieContainer = document.getElementById("cookie-container");
-
-  // Clear existing content
-  cookieContainer.innerHTML = "";
+  const cookieContainer = document.getElementById("cookie-img");
 
   // Create, loop and append identical img elements
   for (let i = 0; i < 5; i++) {
@@ -27,7 +27,7 @@ export function displayCookies() {
       // Highlight the selected cookie
       img.style.opacity = "0.5";
     });
-
+    
     cookieContainer.appendChild(img);
   }
 }
