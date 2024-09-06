@@ -56,4 +56,12 @@ body {
   margin-top: 30px;
   font-family:cursive;
   font-size: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+#quote-container.show {
+  opacity: 1;
+  transform: translateY(0);
 }

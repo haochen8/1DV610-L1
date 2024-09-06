@@ -7,8 +7,6 @@
 
 import { quotes } from "./displayQuote.js";
 
-const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
 export function displayCookies() {
   let isCookieSelected = false;
 
@@ -40,7 +38,13 @@ export function displayCookies() {
       }
       // Highlight the selected cookie
       img.style.opacity = "0";
+
+      // Display and generate random quote
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
       quoteContainer.textContent = `"${randomQuote}"`
+      quoteContainer.classList.add('show')
+
+
     });
     cookieContainer.appendChild(img);
   }
