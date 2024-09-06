@@ -1,5 +1,5 @@
-# En simpelt fortune cookie app
+# Fortune Cookie App
 
-### Beskrivning
-Detta är en simpel fortune cookie app som slumpar fram ett
-citat från en lista när användaren matar in sitt namn.
+### Description
+This is a simple web application that simulates a fortune cookie selection process. After entering your name, you can select one of five fortune cookies, and a random fortune will be displayed along with a reset option to restart the process.
+
