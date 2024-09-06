@@ -1,5 +1,5 @@
 body {
-  background-color:sandybrown;
+  background-color: sandybrown;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -21,16 +21,20 @@ body {
   border-radius: 5px;
 }
 
-#name-form button {
-  background-color:yellowgreen;
+button {
+  background-color: yellowgreen;
   cursor: pointer;
   padding: 4px;
-  color:white;
+  color: white;
   border-radius: 5px;
 }
 
-#name-form button:hover {
+button:hover {
   background-color: springgreen;
+}
+
+#reset-button {
+  margin-top: 20px;
 }
 
 #error-message {
@@ -54,7 +58,7 @@ body {
 
 #quote-container {
   margin-top: 30px;
-  font-family:cursive;
+  font-family: cursive;
   font-size: 40px;
   opacity: 0;
   transform: translateY(20px);

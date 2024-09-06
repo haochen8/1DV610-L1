@@ -9,20 +9,19 @@ import { getNameInput } from "./js/components/nameInput.js";
 import { displayCookies } from "./js/components/selectCookie.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Create a name form
+  // Get elements
   const nameForm = document.getElementById("name-form");
-
-  // Get welcome container
   const welcomeContainer = document.getElementById("welcome-container");
-
-  // Get cookie container and hide
   const cookieContainer = document.getElementById("cookie-container");
-  cookieContainer.style.display = "none";
-
-  // Get quote container and hide
+  const resetButton = document.getElementById("reset-button");
   const quoteContainer = document.getElementById("quote-container");
+  const cookieImgContainer = document.getElementById("cookie-img");
 
+  // Hide cookie container and reset button
+  cookieContainer.style.display = "none";
+  resetButton.style.display = "none";
 
+  // Submitting name form
   nameForm.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent the form from refreshing page
 
@@ -35,11 +34,31 @@ document.addEventListener("DOMContentLoaded", () => {
       errorMessage.textContent = "Please enter your name";
     } else {
       errorMessage.textContent = "";
-      //Hide name form
+
+      // Hide name form and show cookie container
       welcomeContainer.style.display = "none";
-      //Call displayCookies and show
-      displayCookies();
       cookieContainer.style.display = "flex";
+
+      // Clear cookie images and call displayCookies
+      cookieImgContainer.innerHTML = "";
+      displayCookies();
     }
+  });
+
+  // Reset button
+  resetButton.addEventListener("click", function () {
+    // Show the welcome container and hide cookie/quote containers
+    welcomeContainer.style.display = "block";
+
+    // Clear cookie images
+    cookieImgContainer.innerHTML = "";
+
+    // Clear quote and remove animation
+    quoteContainer.textContent = "";
+    quoteContainer.classList.remove("show");
+
+    // Hide reset button and cookie container
+    resetButton.style.display = "none";
+    cookieContainer.style.display = "none";
   });
 });
